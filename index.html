@@ -1,60 +1,57 @@
-<!--
-  File: index.html
-  Description: Simple responsive website with Google AdSense unit inserted.
-  Notes:
-    1. Replace the data-ad-client and data-ad-slot values if you want to use a different ad unit.
-    2. Google AdSense requires that you add your site to your AdSense account and get approval. The ads may not serve until Google approves the site/domain.
-    3. For best mobile behavior, consider using responsive ad code from AdSense; the provided unit is a 728x90 leaderboard (desktop).
-    4. To publish: upload this file to your hosting (GitHub Pages, Netlify, Vercel, or any static host) as index.html.
---><!doctype html>
-
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>موقع مع وحدة إعلانية</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>موقعي مع AdSense</title>
+
+  <!-- كود جوجل أدسنس الأساسي -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6848842124251030"
+     crossorigin="anonymous"></script>
+
   <style>
-    :root{--bg:#f7f7f7;--card:#fff;--accent:#c32323}
-    body{margin:0;font-family:Tahoma, Arial, sans-serif;background:var(--bg);color:#222}
-    header{background:var(--accent);color:#fff;padding:18px 12px;text-align:center}
-    .container{max-width:1000px;margin:22px auto;padding:16px}
-    .card{background:var(--card);padding:18px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06)}
-    .ad-wrap{display:flex;justify-content:center;margin:12px 0}
-    main{line-height:1.6}
-    footer{margin-top:18px;text-align:center;color:#666;font-size:14px}
-    /* Make the 728x90 area behave on small screens: scale down while keeping center */
-    .adsbygoogle{max-width:100%;height:auto}
-    @media (max-width:780px){
-      .ad-wrap ins[style]{width:320px!important;height:50px!important}
+    body {
+      font-family: Tahoma, Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f7f7f7;
+      text-align: center;
     }
-  </style>  <!-- Google AdSense script -->  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6848842124251030" crossorigin="anonymous"></script></head>
+    header {
+      background: #c32323;
+      color: #fff;
+      padding: 20px;
+    }
+    main {
+      margin: 20px;
+    }
+    .ad-wrap {
+      margin: 20px auto;
+      display: flex;
+      justify-content: center;
+    }
+  </style>
+</head>
 <body>
   <header>
-    <h1>مرحبا — موقع تجريبي مع AdSense</h1>
-  </header>  <div class="container">
-    <section class="card">
-      <div class="ad-wrap" aria-hidden="true">
-        <!-- mane1 -->
-        <ins class="adsbygoogle"
-             style="display:inline-block;width:728px;height:90px"
-             data-ad-client="ca-pub-6848842124251030"
-             data-ad-slot="7761107653"></ins>
-        <script>
-             (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-      </div><main>
-    <h2>محتوى تجريبي</h2>
-    <p>هذا نص توضيحي داخل الموقع. يمكنك استبدال المحتوى هنا بما تريد — مقالات، منتجات، أو أي شيء آخر.</p>
+    <h1>مرحبا بك في موقعي</h1>
+  </header>
 
-    <h3>نص إضافي لعرض التخطيط</h3>
-    <p>تأكد أن الموقع الذي ستضع عليه هذه الوحدة قد تم تسجيله والموافقة عليه في حساب AdSense الخاص بك، وإلا لن تظهر الإعلانات فعليًا.</p>
+  <main>
+    <p>هنا محتوى تجريبي بسيط.</p>
+
+    <!-- مكان الإعلان -->
+    <div class="ad-wrap">
+      <ins class="adsbygoogle"
+           style="display:inline-block;width:728px;height:90px"
+           data-ad-client="ca-pub-6848842124251030"
+           data-ad-slot="7761107653"></ins>
+      <script>
+           (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
+
+    <p>أضف محتوى آخر أسفل الإعلان.</p>
   </main>
-
-  <footer>
-    <p>حقوق محفوظة • نسخة تجريبية</p>
-  </footer>
-</section>
-
-  </div>
 </body>
 </html>
